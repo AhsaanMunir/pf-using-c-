@@ -1,0 +1,258 @@
+    #include<iostream>
+    #include<string>
+    #include<map>
+    using namespace std;
+    class  Customer
+    {
+        int a;
+        string b,c,d,e;
+        public:
+        void account(){
+            cout<<"Do you have an account:(1/0)"<<endl;
+            cin>>a;
+            if(a==0){
+                cout<<"Creat a new account."<<endl;
+                cout<<"Enter Email."<<endl;
+                cin>>b;
+                cout<<"Password"<<endl;
+                cin>>c;
+            }
+            else{
+                cout<<"Login your account."<<endl;
+                cout<<"Enter Email."<<endl;
+                cin>>d;
+                cout<<"Password."<<endl;
+                cin>>e;
+            }
+        }
+        void menu(){
+                string v ;
+    int Opinion;
+    int u, Total;
+    cout<<"Meanu:"<<endl;
+    string array[30]={"Coffee","Ice Tea","Slush","Juice","Drink","Burgers","Pizza","Fries","Steaks","Wrap","Wings","Donuts","Nuggets","Rolls","cake"};
+    int array2[30]={500,150,100,100,130,300,700,350,1000,150,250,250,350,450,500};
+    cout<<"items"<<"\t\t\tPrice"<<endl;
+    for(int i=0;i<15;i++){
+        cout<<array[i]<<"\t\t\t"<<array2[i]<<endl;
+    }
+    string array3[]={};
+    cout<<"Enter the number of item you want to purchase:"<<endl;
+    cin>>a;
+    cout<< array[a]<<endl;
+    cout<< array2[a]<<endl;
+    cout<<"How many items"<<endl;
+    cin>>u;
+    Total=array2[a]*u;
+    cout<<"Total bill is"<<endl;
+    cout<< Total<<endl;
+    // place oder
+    cout<<"Enter opinion "<<endl;
+    cout<<"Press 1 if you want to confirm order or Press 0 if you want to cancel."<<endl;
+    cin>>Opinion;/// y/N
+    int Y=1,m=1;
+    if(Opinion==1)
+    {
+        cout<<"Your order has been placed and your total is:"<<Total<<endl;
+        }
+    else if(Opinion==0)
+        {
+            cout<<"Your order cancel"<<endl;
+            cout<<"Want to enter new order.(1/0)"<<endl;
+            cin>>m;
+            if(m==1){
+                    cout<<"Enter the number of item you want to purchase:"<<endl;
+                        cin>>a;
+                        cout<< array[a]<<endl;
+                        cout<< array2[a]<<endl;
+                        cout<<"How many items"<<endl;
+                        cin>>u;
+                        Total=array2[a]*u;
+                        cout<<"Total bill is"<<endl;
+                        cout<< Total<<endl;
+                        // place oder
+                        cout<<"Enter opinion "<<endl;
+                        cout<<"Press 1 if you want to confirm order or Press 0 if you want to cancel."<<endl;
+                        cin>>Opinion;/// y/N
+            }
+        }
+        cout<<"If you want to checkout:"<<endl;
+        cout<<"Your Total bill is :"<<Total<<endl;
+        cout<<"***************"<<endl;
+        cout<<"Payment method "<<endl;
+         int h= 3;
+        cout<<"Cash on delivery or Card (press 3 for cash on delivery)"<<endl;  //for cash on delivery press 3
+        cin>>h;
+        if (h==3){
+            cout<<"cash on delivery \tTotal bill is\n"<<Total<<endl;}
+        else{
+                cout<<"Sorry this method is not avalible"<<endl;}
+        }
+    };
+class Resturent : public Customer
+    {
+       public:
+       void menu(){
+               string array[30]={"Coffee","Ice Tea","Slush","Juice","Drink","Burgers","Pizza","Fries","Steaks","Wrap","Wings","Donuts","Nuggets","Rolls","cake"};
+    int array2[30]={500,150,100,100,130,300,700,350,1000,150,250,250,350,450,500};
+    cout<<"items"<<"\t\t\tPrice"<<endl;
+    for(int i=0;i<15;i++){
+        cout<<array[i]<<"\t\t\t"<<array2[i]<<endl;
+        }
+    }
+    void update(){
+              int j,w;
+    string elem,k;
+ string array[30]={"Coffee","Ice Tea","Slush","Juice","Drink","Burgers","Pizza","Fries","Steaks","Wrap","Wings","Donuts","Nuggets","Rolls","cake"};
+    cout<<"If you want to update the menu press 1:"<<endl;
+    cin>>j;
+    if(j==1){
+        update:
+        int arr3[30];
+        string arr4[30];
+        int size_of_first_arraye,size_of_second_arraye,i=15;
+        cout<<"Enter the QUANTITY/AMOUNT of item which you want to be add: ";
+        cin>>size_of_first_arraye;
+        size_of_first_arraye+=15;
+        for(int i=15; i<size_of_first_arraye; i++)
+        {
+            check:
+            cout<<"Enter the item which you want to be added:  ";
+            cin>>arr4[i];
+            if(arr4[i]=="Coffee"||"Ice Tea"||"Slush"||"Juice"||"Drink"||"Burgers"||"Pizza"||"Fries"||"Steaks"||"Wrap"||"Wings"||"Donuts"||"Nuggets"||"Rolls"||"cake"){
+                cout<<endl;
+
+                }
+        }
+    cout<<"The menu is updated.";
+        }
+        }
+    };
+class Rider
+{
+    public:
+    int a;
+    string b,c,d,e;
+    void display(){
+        cout<<"Do you have an account:(1/0)"<<endl;
+        cin>>a;
+        if(a==0){
+            cout<<"***Creat A New Account***"<<endl;
+            cout<<"Enter Email."<<endl;
+            cin>>b;
+            cout<<"Password"<<endl;
+            cin>>c;
+        }
+        else{
+            cout<<"***Login your account***"<<endl;
+            cout<<"Enter Email."<<endl;
+            cin>>d;
+            cout<<"Password."<<endl;
+            cin>>e;
+        }
+    }
+void input()
+{
+    cout<<"---If You Want To Accept Order Or Not---"<<endl;
+    int q;  
+    cout<<"Press  1 for Confirm the order   Press 0 for reject the order: "<<endl;
+    cin>>q;
+    if(q==1)
+    {
+        cout<<"I accept the oder"<<endl;
+    }
+    else
+    {
+        cout<<"I can't accept oder"<<endl;
+    }
+}
+void output()
+{
+    cout<<"---Update The Food Delivery--- "<<endl;
+    cout<<"If You  don't dilivery the food  then return the food to the same Resturent ,If you dont return then  you fined 15000"<<endl;
+    int s;
+    cout<<"Press  1 for Confirm the divlivery   Press 0 for reject the order: "<<endl;
+    cin>>s;
+    if(s==1)
+    {
+        cout<<"Cancel The Previous Order and Update The New Order the Food Dilvivery"<<endl;
+    }
+    else
+    {
+        cout<<"Don't Update  My Order"<<endl;
+    }
+}
+void show()
+{
+    cout<<"---Update the Cash Collection---"<<endl;
+    int p;
+    cout<<"Press 1 for To Receive The Money If You Diliver The Order     Enter 0 for Not To Diliver Order And Not Receive The Cash "<<endl;
+    cin>>p;
+    if(p==1)
+    {
+        cout<<"Collect The Cash After Diliver The Order "<<endl;
+    }
+    else
+    {
+        cout<<"Not Collected Cash"<<endl;
+    }
+}
+};
+class Admin : public Resturent , public Rider
+{
+    public:
+        int a;
+    string b,c,d,e;
+    void display(){
+        cout<<"Do you have an account:(1/0)"<<endl;
+        cin>>a;
+        if(a==0){
+            cout<<"***Creat A New Account***"<<endl;
+            cout<<"Enter Email."<<endl;
+            cin>>b;
+            cout<<"Password"<<endl;
+            cin>>c;
+        }
+        else{
+            cout<<"***Login your account***"<<endl;
+            cout<<"Enter Email."<<endl;
+            cin>>d;
+            cout<<"Password."<<endl;
+            cin>>e;
+        }
+    }
+};
+int main(){
+    int p;
+    cout<<"If you are a customer press 1:\nIf you are manager press 2:\nIf you are a rider press 3:\nIf you are admin press 4:"<<endl;
+    cin>>p;
+    if(p==1){
+        Customer  c1;
+        c1.account();
+        c1.menu();
+    }
+    else if(p==2){
+        Resturent r1;
+        r1.account();
+        r1.menu();
+        r1.update();
+}
+    else if(p==3){
+        Rider r2;
+        r2.display();
+        r2.input();
+        r2.output();
+        r2.show();
+    }
+    else if(p==4){
+        Admin a1;
+        a1.display();
+        a1.menu();
+        a1.update();
+        a1.input();
+        a1.output();
+        a1.show();
+    }
+    cout<<"***Thank you***"<<endl;
+    return 0;
+}
